@@ -54,6 +54,14 @@
         height: 2px;
         border-radius: 1px;
         background-color: var(--foreground);
+        transition: all 0.4s ease;
+      }
+      &.is-active {
+        .bar {
+          &:nth-child(2) {
+            opacity: 0;
+          }
+        }
       }
     }
   }
