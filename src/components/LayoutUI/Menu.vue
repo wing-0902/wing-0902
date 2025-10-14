@@ -31,12 +31,12 @@
           this.isDown = !this.isDown;
           setTimeout(() => {
             this.is45deg = !this.is45deg;
-          }, 2000);
+          }, 300);
         } else {
           this.is45deg = !this.is45deg;
           setTimeout(() => {
             this.isDown = !this.isDown;
-          },2000);
+          },300);
         };
       },
     },
@@ -85,6 +85,16 @@
           }
           &:nth-child(3) {
             transform: translateY(var(--goUp));
+          }
+        }
+      }
+      &.is-45deg {
+        .bar {
+          &:nth-child(1) {
+            transform: translateY(var(--goDown)) rotate(45deg);
+          }
+          &:nth-child(3) {
+            transform: translateY(var(--goUp)) rotate(-45deg);
           }
         }
       }
