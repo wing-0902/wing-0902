@@ -26,13 +26,14 @@
     },
     methods: {
       toggleMenu() {
-        this.isOpen = !this.isOpen;
-        if (this.isOpen) {
+        if (!this.isOpen) {
+          this.isOpen = true;
           this.isDown = true;
           setTimeout(() => {
             this.is45deg = true;
           }, 300);
         } else {
+          this.isOpen = false;
           this.is45deg = false;
           setTimeout(() => {
             this.isDown = false;
@@ -72,7 +73,7 @@
       &.is-active {
         .bar {
           &:nth-child(2) {
-            opacity: 0;
+            background-color: transparent;
           }
         }
       }
