@@ -64,7 +64,6 @@
       top: 0;
       left: 0;
       width: 250px;
-      height: 100%;
       padding-top: 20px;
       transform: translateX(-100%);
       transition: transform 0.3s ease-in-out;
