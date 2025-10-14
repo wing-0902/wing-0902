@@ -1,6 +1,7 @@
 ---
 import RootLayout from './RootLayout.astro';
 import CurrentPathOnSSG from '../components/LayoutUI/CurrentPathOnSSG.astro';
+import DefaultHeader from '../components/LayoutUI/DefaultHeader.astro';
 
 interface Props {
   title?: string;
@@ -22,6 +23,7 @@ const {
   description={description}
   noindex={noindex}
 >
+  <DefaultHeader />
   <div class='slotDiv'>
     {!hideCurrentPath && (<CurrentPathOnSSG />)}
     <div>
