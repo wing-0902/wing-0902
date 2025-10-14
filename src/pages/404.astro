@@ -1,0 +1,20 @@
+---
+import HeaderLayout from '../layouts/HeaderLayout.astro';
+import CurrentPathOn404 from '../components/LayoutUI/CurrentPathOn404.svelte';
+---
+
+<HeaderLayout
+  title="404 Not Found | Wave Graphics"
+  noindex={true}
+  hideCurrentPath={true}
+>
+  <section data-pagefind-ignore="all">
+    <CurrentPathOn404 client:load />
+    <h2>404 Not Found</h2>
+    <p>お探しのページは見つかりませんでした．ページが削除されたか，移動した可能性もあります．</p>
+  </section>
+</HeaderLayout>
+
+<style lang="scss">
+
+</style>
