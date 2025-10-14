@@ -1,7 +1,7 @@
 <template>
   <div class='menuContainer'>
     <button
-      :class="{ 'is-active': isOpen }"
+      :class="{ 'is-active': isOpen, 'is-down': isDown, 'is-45deg': is45deg }"
       @click="toggleMenu"
       aria-label="メニューを開閉"
     >
@@ -20,11 +20,24 @@
     data() {
       return {
         isOpen: false,
+        isDown: false,
+        is45deg: false,
       };
     },
     methods: {
       toggleMenu() {
         this.isOpen = !this.isOpen;
+        if (this.isOpen) {
+          this.isDown = !this.isDown;
+          setTimeout(() => {
+            this.is45deg = !this.is45deg;
+          }, 2000);
+        } else {
+          this.is45deg = !this.is45deg;
+          setTimeout(() => {
+            this.isDown = !this.isDown;
+          },2000);
+        };
       },
     },
   };
@@ -60,6 +73,18 @@
         .bar {
           &:nth-child(2) {
             opacity: 0;
+          }
+        }
+      }
+      &.is-down {
+        .bar {
+          --goDown: 10px;
+          --goUp: -10px;
+          &:nth-child(1) {
+            transform: translateY(var(--goDown));
+          }
+          &:nth-child(3) {
+            transform: translateY(var(--goUp));
           }
         }
       }
