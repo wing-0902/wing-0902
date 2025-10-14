@@ -1,0 +1,32 @@
+---
+const currentPath = decodeURI(Astro.url.pathname);
+
+let pathSegments: {name: string; path: string;}[] = [];
+
+const segments = currentPath.split('/').filter(segment => segment.length > 0);
+
+let currentPathAccumulator = '';
+
+pathSegments = segments.map(segment => {
+  currentPathAccumulator += `/${segment}/`;
+
+  return {
+    name: segment.includes('.') ? segment.substring(0, segment.lastIndexOf('.')): segment,
+    path: currentPathAccumulator
+  };
+});
+---
+
+<div>
+  <a href='/'>wing.osaka</a>
+  {pathSegments.map(segment => (
+    <span>&nbsp;&gt;</span>
+    <a href={segment.path}>{segment.name}</a>
+  ))}
+</div>
+
+<style lang="scss">
+  a, span {
+    font-family: FiraCode, ZenMaru;
+  }
+</style>
