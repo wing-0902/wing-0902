@@ -1,14 +1,36 @@
 ---
+import RootLayout from './RootLayout.astro';
+
 interface Props {
   title?: string;
   description?: string;
   noindex?: boolean;
-  
+  hideCurrentPath?: boolean;
 }
 
 const {
   title = 'Wingのサイト',
   description = '地球人のWingが，ウェブサイトをやってます．自己紹介兼ブログになってるんで，見てってください．特技：写真，プログラミング，サボること．',
   noindex= false,
+  hideCurrentPath = false,
 } = Astro.props;
 ---
+
+<RootLayout
+  title={title}
+  description={description}
+  noindex={noindex}
+>
+  <div class='slotDiv'>
+    {!hideCurrentPath && (<CurrentPathOnSSG />)}
+    <div>
+      <slot />
+    </div>
+  </div>
+</RootLayout>
+
+<style lang="scss">
+  .slotDiv {
+    margin: 40px 12px;
+  }
+</style>
