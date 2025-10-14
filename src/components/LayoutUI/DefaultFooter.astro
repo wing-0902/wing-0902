@@ -1,0 +1,25 @@
+---
+const today = new Date();
+const currentYear = today.getFullYear();
+---
+
+<footer>
+  <p>Wingのサイトをご覧いただき，ありがとうございます．</p>
+  <p>コメント・質問など，Wingへのメッセージがあれば，<a href="form">アンケート</a>よりお知らせください．</p>
+  <p>コンテンツの著作権は，編集部及び編集者または明記された権利者に帰属します．</p>
+  <p>&copy; {currentYear} <a href="/">Wing</a>.</p>
+  <a href='mailto:wing@me.wing.osaka'>wing@me.wing.osaka</a>
+</footer>
+
+<style lang="scss">
+  footer {
+    text-align: center;
+    
+    --shadow: #00000055;
+    @media (prefers-color-scheme: dark) {
+      --shadow: #fffff155;
+    }
+
+    box-shadow: 0px -4px 3px var(--shadow);
+  }
+</style>

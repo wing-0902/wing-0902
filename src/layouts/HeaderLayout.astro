@@ -2,6 +2,7 @@
 import RootLayout from './RootLayout.astro';
 import CurrentPathOnSSG from '../components/LayoutUI/CurrentPathOnSSG.astro';
 import DefaultHeader from '../components/LayoutUI/DefaultHeader.astro';
+import DefaultFooter from '../components/LayoutUI/DefaultFooter.astro';
 
 interface Props {
   title?: string;
@@ -30,10 +31,12 @@ const {
       <slot />
     </div>
   </div>
+  <DefaultFooter />
 </RootLayout>
 
 <style lang="scss">
   .slotDiv {
     margin: 40px 12px;
+    min-height: 200px;
   }
 </style>
