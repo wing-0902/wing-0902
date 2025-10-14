@@ -5,4 +5,10 @@ interface Props {
   noindex?: boolean;
   
 }
+
+const {
+  title = 'Wingのサイト',
+  description = '',
+  noindex= false,
+} = Astro.props;
 ---
