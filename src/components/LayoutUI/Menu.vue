@@ -12,9 +12,11 @@
     <nav
       :class="{'is-open': isOpen}"
     >
-    <ul>
-      <li></li>
-    </ul>
+      <ul>
+        <li>
+          おおさか
+        </li>
+      </ul>
     </nav>
     <div v-if="isOpen" class="overlay" @click="toggleMenu"></div>
   </div>
@@ -66,7 +68,8 @@
       padding-top: 20px;
       transform: translateX(-100%);
       transition: transform 0.3s ease-in-out;
-      backdrop-filter: blur(8px);
+      background-color: var(--background-transparent);
+
       &.is-open {
         transform: translateX(0);
       }
