@@ -28,14 +28,14 @@
       toggleMenu() {
         this.isOpen = !this.isOpen;
         if (this.isOpen) {
-          this.isDown = !this.isDown;
+          this.isDown = true;
           setTimeout(() => {
-            this.is45deg = !this.is45deg;
+            this.is45deg = true;
           }, 300);
         } else {
-          this.is45deg = !this.is45deg;
+          this.is45deg = false;
           setTimeout(() => {
-            this.isDown = !this.isDown;
+            this.isDown = false;
           },300);
         };
       },
