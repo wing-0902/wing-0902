@@ -9,7 +9,13 @@
       <span class="bar"></span>
       <span class="bar"></span>
     </button>
-    <nav></nav>
+    <nav
+      :class="{'is-open': isOpen}"
+    >
+    <ul>
+      <li></li>
+    </ul>
+    </nav>
     <div v-if="isOpen" class="overlay" @click="toggleMenu"></div>
   </div>
 </template>
@@ -49,6 +55,24 @@
     position: relative;
     z-index: 1000;
 
+    // メニューのほう
+    nav {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      padding-top: 20px;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      backdrop-filter: blur(8px);
+      &.is-open {
+        transform: translateX(0);
+      }
+    }
+
+    // ボタンのほう
     button {
       width: 30px;
       height: 30px;
