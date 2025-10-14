@@ -1,14 +1,18 @@
 ---
 import WingLogo from '../Icon/WingLogo-hover.astro';
+import Menu from './Menu.vue';
 ---
 
 <header>
+  <Menu client:load />
   <a href="/" class='as-h1'>
     <WingLogo height={35} />
     Wing's HomePage
   </a>
-  <p>あい</p>
-  <p>うえ</p>
+  <nav>
+    <a href='/posts/'>Blog</a>
+    <a href='/profile/'>Profile</a>
+  </nav>
 </header>
 
 <style lang="scss">
