@@ -15,9 +15,8 @@
         currentPathAccumulator += `/${segment}/`;
         
         return {
-          // 表示用の名前。ファイル名の場合は拡張子を除去（例：index.html -> index）
+          // 拡張子を削除
           name: segment.includes('.') ? segment.substring(0, segment.lastIndexOf('.')) : segment,
-          // リンク先パス
           path: currentPathAccumulator
         };
       });
