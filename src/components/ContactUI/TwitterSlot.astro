@@ -1,17 +1,11 @@
 ---
-interface Props {
-  address: string;
-}
-
-const { address } = Astro.props;
-
-import EmailIcon from '../Icon/EmailIcon.astro';
+import TwitterIcon from "../Icon/TwitterIcon.astro";
 ---
 
 <div>
-  <a href=`mailto:${address}`>
-    <EmailIcon height={20} />
-    {address}
+  <a href='/'>
+    <TwitterIcon height={20} />
+    Twitter
   </a>
 </div>
 
