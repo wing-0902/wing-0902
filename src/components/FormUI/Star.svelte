@@ -16,7 +16,3 @@
     </svg>
   {/if}
 </span>
-
-<style lang="scss">
-
-</style>
