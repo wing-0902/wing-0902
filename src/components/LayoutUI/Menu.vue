@@ -63,14 +63,17 @@
       z-index: 1000;
       top: 0;
       left: 0;
-      width: 250px;
+      height: 100vh;
+      width: 450px;
       padding-top: 20px;
       transform: translateX(-100%);
-      transition: transform 0.3s ease-in-out;
+      opacity: 0;
+      transition: all 0.44s ease-in-out;
       background-color: var(--background-transparent);
 
       &.is-open {
         transform: translateX(0);
+        opacity: 1;
       }
     }
 
