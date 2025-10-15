@@ -88,13 +88,13 @@
       top: 0;
       left: 0;
       height: 100dvh;
-      width: 450px;
-      max-width: 100vw;
+      width: 100vw;
       padding-top: 20px;
       transform: translateX(-100%);
       opacity: 0;
       transition: all 0.44s ease-in-out;
       background-color: var(--background-transparent);
+      backdrop-filter: blur(8px);
 
       &.is-open {
         transform: translateX(0);
