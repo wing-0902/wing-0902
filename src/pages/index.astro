@@ -2,6 +2,19 @@
 import HeaderLayout from "../layouts/HeaderLayout.astro";
 ---
 
-<HeaderLayout>
-
+<HeaderLayout
+  hideCurrentPath={true}
+>
+  <h1>Welcome!</h1>
+  <section class="secId">
+    <p>Wingのホームページへようこそ！</p>
+    <p>地球人のWingが，ウェブサイトをやってます．自己紹介兼ブログになってるんで，見てってください．</p>
+    <p>特技：写真，プログラミング，サボること．</p>
+  </section>
 </HeaderLayout>
+
+<style lang="scss">
+  .secId {
+    text-align: center;
+  }
+</style>
