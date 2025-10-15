@@ -22,7 +22,8 @@
           </ul>
         </li>
         <li>
-          <a href="/blog/">ブログ</a>
+          <a href="/blog/">ブログ</a><br />
+          <span>ブログはじめました！</span>
           <ul>
             <li><a>投稿一覧</a></li>
             <li><a>タグから探す</a></li>
