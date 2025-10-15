@@ -16,7 +16,7 @@
         <li>
           <a href="/">ホーム</a>
           <ul>
-            <li><a>自己紹介</a></li>
+            <li><a href="/profile/">自己紹介</a></li>
             <li><a>特技</a></li>
             <li><a>連絡先</a></li>
           </ul>
