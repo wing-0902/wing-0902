@@ -12,15 +12,22 @@ interface Props {
 }
 
 const {
-  title = 'Wingのサイト',
+  title = '',
   description = '地球人のWingが，ウェブサイトをやってます．自己紹介兼ブログになってるんで，見てってください．特技：写真，プログラミング，サボること．',
   noindex= false,
   hideCurrentPath = false,
 } = Astro.props;
+
+let rootTitle: string = ''
+if (title == '') {
+  rootTitle = 'Wingのサイト';
+} else {
+  rootTitle = `${title} | Wingのサイト`;
+};
 ---
 
 <RootLayout
-  title=`${title} | Wingのサイト`
+  title={rootTitle}
   description={description}
   noindex={noindex}
 >
