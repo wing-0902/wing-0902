@@ -63,8 +63,9 @@
       z-index: 1000;
       top: 0;
       left: 0;
-      height: 100vh;
+      height: 100dvh;
       width: 450px;
+      max-width: 100vw;
       padding-top: 20px;
       transform: translateX(-100%);
       opacity: 0;
