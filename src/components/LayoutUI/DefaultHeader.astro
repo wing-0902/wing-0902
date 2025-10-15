@@ -5,7 +5,7 @@ import Menu from './Menu.vue';
 
 <header>
   <Menu client:load />
-  <a href="/" class='as-h1'>
+  <a href="/" class='titleAsH1'>
     <WingLogo height={27} />
     Wing's HomePage
   </a>
@@ -30,7 +30,8 @@ import Menu from './Menu.vue';
     padding: 0 8px;
     box-sizing: border-box;
 
-    .as-h1 {
+    .titleAsH1 {
+      display: flex;
       font-size: 1.5em;
       font-weight: bold;
       font-family: Playwrite;

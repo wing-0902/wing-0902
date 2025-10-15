@@ -92,10 +92,8 @@
       max-width: 100vw;
       padding-top: 20px;
       transform: translateX(-100%);
-      opacity: 0;
       transition: all 0.44s ease-in-out;
       background-color: var(--background-transparent);
-      backdrop-filter: blur(8px);
 
       &.is-open {
         transform: translateX(0);
@@ -154,6 +152,17 @@
           }
         }
       }
+    }
+
+    .overlay {
+      position: fixed;
+      z-index: 900;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100dvh;
+      transition: all 0.44s ease;
+      opacity: 0;
     }
   }
 </style>
