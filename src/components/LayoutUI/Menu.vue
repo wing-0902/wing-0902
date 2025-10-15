@@ -32,7 +32,7 @@
         <li>
           <a>アプリ一覧</a>
           <ul>
-            <a>GitHubプロフィール</a>
+            <a href="https://github.com/wing-0902">GitHubプロフィール</a>
           </ul>
         </li>
       </ul>
