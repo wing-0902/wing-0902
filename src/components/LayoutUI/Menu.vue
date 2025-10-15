@@ -15,6 +15,25 @@
       <ul>
         <li>
           <a href="/">ホーム</a>
+          <ul>
+            <li><a>自己紹介</a></li>
+            <li><a>特技</a></li>
+            <li><a>連絡先</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/blog/">ブログ</a>
+          <ul>
+            <li><a>投稿一覧</a></li>
+            <li><a>タグから探す</a></li>
+            <li><a>検索</a></li>
+          </ul>
+        </li>
+        <li>
+          <a>アプリ一覧</a>
+          <ul>
+            <a>GitHubプロフィール</a>
+          </ul>
         </li>
       </ul>
     </nav>
