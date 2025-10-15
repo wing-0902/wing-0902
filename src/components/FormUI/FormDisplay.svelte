@@ -75,7 +75,7 @@
       <br />
       <div class='spacer'>
         <label for='email'>メールアドレス</label>
-        <input name='email' placeholder='contact@wave.graphics' type='text' id='email' bind:value={email} />
+        <input name='email' placeholder='contact@wave.graphics' type='email' id='email' bind:value={email} />
       </div>
     </fieldset>
     <fieldset>
@@ -183,6 +183,7 @@
     font-family: FiraCode;
   }
   input[type="text"]:focus,
+  input[type="email"]:focus,
   textarea:focus {
     border-color: var(--a-hover);
     outline: none;
