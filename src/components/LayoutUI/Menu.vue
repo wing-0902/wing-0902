@@ -88,7 +88,8 @@
       top: 0;
       left: 0;
       height: 100dvh;
-      width: 100vw;
+      width: 400px;
+      max-width: 100vw;
       padding-top: 20px;
       transform: translateX(-100%);
       opacity: 0;
