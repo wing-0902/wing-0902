@@ -39,7 +39,13 @@
             <li><a target="_blank" href="https://lifeis.money/">LIFE IS MONEY</a></li>
           </ul>
         </li>
-        <li><a>サイトマップ</a></li>
+        <li>
+          <a>サイトマップ</a>
+          <ul>
+            <li><a href="/form/">アンケート</a></li>
+            <li>メール：<a href="mailto:wing@me.wing.osaka">wing@me.wing.osaka</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
     <div v-if="isOpen" class="overlay" @click="toggleMenu"></div>
