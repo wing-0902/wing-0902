@@ -30,11 +30,15 @@
           </ul>
         </li>
         <li>
-          <a>アプリ一覧</a>
+          <a>アプリ一覧</a><br />
+          <span>Wingが作成したWebサイト・アプリ等をまとめています．ぜひご覧ください！</span>
           <ul>
             <li><a target="_blank" href="https://github.com/wing-0902">GitHubプロフィール</a></li>
+            <li><a target="_blank" href="https://wave.graphics/">Wave Graphics App by Wing</a></li>
+            <li><a target="_blank" href="https://lifeis.money/">LIFE IS MONEY</a></li>
           </ul>
         </li>
+        <li><a>サイトマップ</a></li>
       </ul>
     </nav>
     <div v-if="isOpen" class="overlay" @click="toggleMenu"></div>
