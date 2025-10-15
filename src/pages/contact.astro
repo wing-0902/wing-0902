@@ -1,0 +1,14 @@
+---
+import HeaderLayout from "../layouts/HeaderLayout.astro";
+import EmailSlot from "../components/ContactUI/EmailSlot.astro";
+---
+
+<HeaderLayout
+  title="連絡先"
+  description="Wingと個人的に話してみたい方，大事な用事がある方は，こちらから連絡してください．返すかどうかはわかりませんが，できるだけ拝見いたします．"
+
+>
+  <h1>連絡先</h1>
+  <h2>メール等</h2>
+  <EmailSlot address="wing@me.wing.osaka" />
+</HeaderLayout>

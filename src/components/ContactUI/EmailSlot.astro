@@ -1,0 +1,30 @@
+---
+interface Props {
+  address: string;
+}
+
+const { address } = Astro.props;
+
+import EmailIcon from '../Icon/EmailIcon.astro';
+---
+
+<div>
+  <a href=`mailto:${address}`>
+    <EmailIcon height={22} />
+    {address}
+  </a>
+</div>
+
+<style lang="scss">
+  a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid;
+    padding: 7px;
+    box-sizing: border-box;
+    border-radius: 18px 7px;
+  }
+</style>

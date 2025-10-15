@@ -18,7 +18,7 @@
           <ul>
             <li><a href="/profile/">自己紹介</a></li>
             <li><a>特技</a></li>
-            <li><a>連絡先</a></li>
+            <li><a href="/contact/">連絡先</a></li>
           </ul>
         </li>
         <li>
