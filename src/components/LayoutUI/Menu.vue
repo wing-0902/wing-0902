@@ -22,7 +22,7 @@
           </ul>
         </li>
         <li>
-          <a href="/blog/">ブログ</a><br />
+          <a href="https://blog.wing.osaka/">ブログ</a><br />
           <span>ブログはじめました！</span>
           <ul>
             <li><a>投稿一覧</a></li>
