@@ -1,6 +1,7 @@
 ---
 import HeaderLayout from "../../layouts/HeaderLayout.astro";
 import Profile from "../../components/IndexUI/Profile.astro";
+import Widget from "../../components/IndexUI/Widget.vue";
 ---
 
 <HeaderLayout
@@ -13,4 +14,22 @@ import Profile from "../../components/IndexUI/Profile.astro";
     <p>地球のどこかに住む地球人です（小泉構文！！）．ざっくり言うと，大阪のモブキャラってとこです．あなたとはもしかすると，もう私と会ったことがあるかもしれません（知らんけど）...</p>
     <p>このサイトは，まだまだ作成途中なので，これから色々追加していこうと思います．ぜひ今後もご覧ください．</p>
   </section>
+  <section>
+    <h2>趣味・特技</h2>
+    <p>プログラミング，写真，怠けることなど．詳細は下記から一つずつご覧ください！</p>
+    <div>
+      <Widget
+        title="趣味・特技"
+        path="/goodAt/"
+        image="/hotlink-ok/favicon/wingLogo.png"
+        client:load
+      />
+    </div>
+  </section>
 </HeaderLayout>
+
+<style lang="scss">
+  section {
+    margin: 8px 0;
+  }
+</style>
