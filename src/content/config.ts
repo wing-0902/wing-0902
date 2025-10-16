@@ -13,7 +13,7 @@ const goodAtCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    image: z.string(),
+    image: z.string().default('/hotlink-ok/favicon/wingLogo.png'),
     description: z.string(),
   }),
 });
