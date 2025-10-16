@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import wingLogo from '../Icon/wingLogo.png';
+import EmailSlot from '../ContactUI/EmailSlot.astro';
+import TwitterSlot from '../ContactUI/TwitterSlot.astro';
+import GitHubSlot from '../ContactUI/GitHubSlot.astro';
+---
+
+<section>
+  <Image class="logoImage" src={wingLogo} alt="WingのSNSロゴ．鳥の写真をモチーフにしてます．" width=100px />
+  <div class="rightSlot">
+    <h2>Wing</h2>
+    <EmailSlot address="wing@me.wing.osaka" />
+    <TwitterSlot />
+    <GitHubSlot />
+  </div>
+</section>
+
+<style lang="scss">
+  section {
+    border: 1px solid var(--a-default);
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+
+    .logoImage {
+      border-radius: 50%;
+      margin: 10px;
+      box-sizing: border-box;
+    }
+    
+    .rightSlot {
+      margin: 0 10px;
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+</style>
