@@ -56,6 +56,11 @@
 
       .textSlot {
         width: 100%;
+
+        p {
+          text-shadow: 1px 1px 6px var(--background);
+        }
+
         .title {
           font-size: 1.3em;
           margin-left: 20px;
