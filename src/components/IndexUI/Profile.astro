@@ -9,7 +9,9 @@ import GitHubSlot from '../ContactUI/GitHubSlot.astro';
 <section>
   <Image class="logoImage" src={wingLogo} alt="WingのSNSロゴ．鳥の写真をモチーフにしてます．" width=100px />
   <div class="rightSlot">
-    <h2>Wing</h2>
+    <div class="contactSlot">
+      <h2>Wing</h2>
+    </div>
     <EmailSlot address="wing@me.wing.osaka" />
     <TwitterSlot />
     <GitHubSlot />
@@ -35,6 +37,10 @@ import GitHubSlot from '../ContactUI/GitHubSlot.astro';
       margin: 0 10px;
       width: 100%;
       flex-direction: column;
+
+      .contactSlot {
+        
+      }
     }
   }
 </style>
