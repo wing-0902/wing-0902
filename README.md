@@ -15,6 +15,12 @@ Here are some ideas to get you started:
 
 # Wing
 
+## Who am I?
+
+I'm a Javanese high school student, living in Osaka.
+
+I'm interested in photograph, economics, and programming.
+
 ## My Favorite Frameworks & Tools
 
 ![Astro](https://img.shields.io/badge/Astro-555555?style=for-the-badge&logo=astro&logoColor=BC52EE)
@@ -24,6 +30,7 @@ Here are some ideas to get you started:
 ![Vite](https://img.shields.io/badge/Vite-555555?style=for-the-badge&logo=Vite&logoColor=#9135FF)
 ![pnpm](https://img.shields.io/badge/pnpm-555555?style=for-the-badge&logo=pnpm&logoColor=##F69220)
 ![Yarn](https://img.shields.io/badge/Yarn-555555?style=for-the-badge&logo=Yarn&logoColor=#2C8EBB)
+![Homebrew](https://img.shields.io/badge/Homebrew-555555?style=for-the-badge&logo=homebrew&logoColor=#FBB040)
 
 ## My Top Languages
 
@@ -32,4 +39,10 @@ Here are some ideas to get you started:
 ![Swift](https://img.shields.io/badge/Swift-555555?style=for-the-badge&logo=Swift&logoColor=#F05138)
 
 ## How to reach me...
+
+Email: [wing@me.wing.osaka](mailto:wing@me.wing.osaka)
+
+### Websites & SNS
+
+[![Swift](https://img.shields.io/badge/wing.osaka-555555?style=for-the-badge&logo=cloudflarepages&logoColor=##F38020)](https://wing.osaka/)
 [![Bluesky](https://img.shields.io/badge/@wing.osaka-555555?style=for-the-badge&logo=Bluesky&logoColor=#1185FE)](https://bsky.app/profile/wing.osaka)
