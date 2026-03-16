@@ -17,7 +17,7 @@ Here are some ideas to get you started:
 
 ## Who am I?
 
-I'm a Javanese high school student, living in Osaka.
+I'm a Japanese high school student, living in Osaka.
 
 I'm interested in photograph, economics, and programming.
 
