@@ -18,13 +18,19 @@ importers:
         specifier: ^3.5.39
         version: 3.5.39
     devDependencies:
+      '@iconify-json/hugeicons':
+        specifier: ^1.2.30
+        version: 1.2.30
       '@unocss/astro':
         specifier: ^66.7.5
         version: 66.7.5(vite@8.1.3(esbuild@0.28.1)(jiti@2.7.0)(sass@1.101.0))
       '@unocss/preset-attributify':
         specifier: ^66.7.5
         version: 66.7.5
-      '@unocss/preset-wind4':
+      '@unocss/preset-icons':
+        specifier: ^66.7.5
+        version: 66.7.5
+      '@unocss/preset-mini':
         specifier: ^66.7.5
         version: 66.7.5
       '@unocss/reset':
@@ -514,6 +520,9 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@iconify-json/hugeicons@1.2.30':
+    resolution: {integrity: sha512-L38YPId/uZ8xZJL+rdwB5/uI/jpnbzqXetfo1b0wbBi6h2pnyEy6HpQouCJXMBUOkp2iVWu8C1VdFRG+JRFwpg==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -2764,6 +2773,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.28.1':
     optional: true
+
+  '@iconify-json/hugeicons@1.2.30':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify/types@2.0.0': {}
 

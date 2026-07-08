@@ -1,6 +1,6 @@
 ---
-import '@unocss/reset/sanitize/sanitize.css';
-import '@unocss/reset/sanitize/assets.css';
+import '@unocss/reset/sanitize/sanitize.css'
+import '@unocss/reset/sanitize/assets.css'
 
 import '~/assets/global.scss';
 
@@ -55,7 +55,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     {twitterCard && <meta name="twitter:card" content={twitterCard} />}
     <slot name="head" />
   </head>
-  <body>
+  <body flex="~ col" overflow="hidden" h-screen w-screen>
     <slot />
   </body>
 </html>

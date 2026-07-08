@@ -1,14 +1,21 @@
 ---
-import Logo from "~/components/Logo.astro"
+import Logo from '~/components/Logo.astro';
+import Footer from '~/layouts/Footer.astro';
 ---
 
-<header w-full h-12 flex="between">
-  <Logo height={50} />
-  <span>
-    <a>bsky</a>
-  </span>
+<header p-3 w-full h-12 flex justify-between align-center>
+  <Logo height={40} />
+  <div flex gap="2">
+    <a href="https://bsky.app/profile/wing.osaka" target="_blank">
+      <i i-hugeicons-bluesky text-xl></i>
+    </a>
+    <a href="https://github.com/wing-0902" target="_blank">
+      <i i-hugeicons-github text-xl></i>
+    </a>
+  </div>
 </header>
 
-<div>
+<div flex-1 overflow="x-hidden y-scroll">
   <slot />
+  <Footer />
 </div>

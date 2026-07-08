@@ -5,12 +5,7 @@ import vue from '@astrojs/vue';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    UnoCSS({
-      injectReset: false // disable auto style reset in order to specify multiple stylesheets
-    }),
-    vue()
-  ],
+  integrations: [UnoCSS(), vue()],
   output: 'static',
   scopedStyleStrategy: 'class',
   site: 'https://wing.osaka',

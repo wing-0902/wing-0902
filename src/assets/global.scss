@@ -1,9 +1,18 @@
 @use 'v';
 
 body {
-    background-color: v.$background;
-    color: v.$foreground;
-    a {
-        color: v.$link_color;
-    }
+  background-color: v.$background;
+  color: v.$foreground;
+}
+
+a {
+  color: v.$link_color;
+}
+
+i {
+  display: inline-block;
+}
+
+h1 {
+  font-size: 800;
 }
