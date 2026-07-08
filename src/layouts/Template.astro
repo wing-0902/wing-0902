@@ -11,6 +11,8 @@ import '@fontsource/zen-kaku-gothic-antique/900.css';
 
 import defaultMeta from '~/assets/defaultMeta.json';
 
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
 interface Props {
   title?: string;
   description?: string;
@@ -36,8 +38,6 @@ const {
   ogType = 'website',
   twitterCard = 'summary_large_image'
 } = Astro.props;
-
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <html lang={lang}>
