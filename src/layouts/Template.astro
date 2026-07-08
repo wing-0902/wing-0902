@@ -1,0 +1,59 @@
+---
+import '@unocss/reset/sanitize/sanitize.css';
+import '@unocss/reset/sanitize/assets.css';
+
+import defaultMeta from '~/assets/defaultMeta.json';
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: string;
+
+  /* ogp data (not always required) */
+  ogTitle?: string;
+  ogDescription?: string;
+  ogSiteName?: string;
+  ogType?: string;
+  twitterCard?: string;
+}
+
+const {
+  title = defaultMeta.title,
+  description = defaultMeta.description,
+  lang = defaultMeta.lang,
+
+  /* ogp data can be generated automatically if props doesn't exist */
+  ogTitle = title,
+  ogDescription = description,
+  ogSiteName = defaultMeta.site_name,
+  ogType = 'website',
+  twitterCard = 'summary_large_image'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalURL} />
+    <meta property="og:url" content={canonicalURL} />
+
+    {ogSiteName && <meta property="og:site_name" content={ogSiteName} />}
+
+    {title && <title>{title}</title>}
+    {ogTitle && <meta property="og:title" content={ogTitle} />}
+
+    {description && <meta name="description" content={description} />}
+    {ogDescription && <meta property="og:description" content={ogDescription} />}
+
+    {ogType && <meta property="og:type" content={ogType} />}
+    {twitterCard && <meta name="twitter:card" content={twitterCard} />}
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
