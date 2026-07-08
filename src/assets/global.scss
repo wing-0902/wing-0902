@@ -3,6 +3,7 @@
 body {
   background-color: v.$background;
   color: v.$foreground;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
 }
 
 a {
@@ -11,8 +12,4 @@ a {
 
 i {
   display: inline-block;
-}
-
-h1 {
-  font-size: 800;
 }

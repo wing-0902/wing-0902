@@ -15,7 +15,9 @@ import Footer from '~/layouts/Footer.astro';
   </div>
 </header>
 
-<div flex-1 overflow="x-hidden y-scroll">
-  <slot />
-  <Footer />
+<div px-5 flex-1 flex justify-center overflow="x-hidden y-scroll">
+  <div min-h-full w-full max-w-180>
+    <slot />
+    <Footer />
+  </div>
 </div>
