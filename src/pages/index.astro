@@ -1,10 +1,43 @@
 ---
 import Template from '~/layouts/Template.astro';
 import Header from '~/layouts/Header.astro';
+
+import WebDevProfile from '~/components/WebDevProfile.astro';
+import OpenGraph from '~/components/OpenGraph.astro';
 ---
 
 <Template>
   <Header>
     <h1>Wing</h1>
+    <p>ちょっとマイペースな大阪の高校生，Wing．ウェブ開発，写真などが趣味．</p>
+
+    <WebDevProfile />
+
+    <h2>できること・趣味</h2>
+
+    <h3>ウェブ開発</h3>
+
+    <p>
+      ウェブ開発してます．このページも自作．<br />
+    </p>
+
+    <h3>プログラミング</h3>
+
+    <p>ウェブ開発以外の言語にも興味あり．（まだまだ勉強中です）</p>
+
+    <ul>
+      <li>Swift → 現在学習中</li>
+    </ul>
+
+    <h3>写真</h3>
+
+    <p>ギャラリーがあります．下のカードをタップしてご覧ください．</p>
+
+    <OpenGraph
+      href="https://gallery.wing.osaka"
+      ogTitle="Gallery by Wing"
+      ogDescription="Wingのフォトギャラリー"
+      ogImageUrl="/image/IMG_5806.png"
+    />
   </Header>
 </Template>

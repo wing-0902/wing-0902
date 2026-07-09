@@ -1,0 +1,23 @@
+---
+import { parseHost, withoutProtocol } from 'ufo';
+
+interface Props {
+  href: string;
+  ogTitle: string;
+  ogDescription?: string;
+  ogImageUrl?: string;
+}
+
+const { href, ogTitle, ogDescription, ogImageUrl } = Astro.props;
+---
+
+<a text-white no-underline w-full flex justify-center href={href} target="_blank">
+  <div border="[1px] solid" rounded="[4px]" bg="black/50" w-full max-w-120>
+    {ogImageUrl && <img rounded="[2px]" src={ogImageUrl} />}
+    <p my-1 mx-3 text-xl>{ogTitle}</p>
+    {ogDescription && <small mx-3>{ogDescription}</small>}
+
+    <hr my-1 mx-4 h="[1px]" />
+    <p mt-0 mb-1 mx-3><i i-hugeicons-link-02></i>{parseHost(withoutProtocol(href)).hostname}</p>
+  </div>
+</a>

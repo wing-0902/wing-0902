@@ -3,7 +3,11 @@
 body {
   background-color: v.$background;
   color: v.$foreground;
-  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-family: 'Zen Maru Gothic', sans-serif;
+
+  h1 {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  }
 }
 
 a {

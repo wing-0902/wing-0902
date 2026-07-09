@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@astrojs/alpinejs':
+        specifier: ^1.0.0
+        version: 1.0.0(@types/alpinejs@3.13.11)(alpinejs@3.15.12)
       '@astrojs/vue':
         specifier: ^7.0.1
         version: 7.0.1(astro@7.0.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(jiti@2.7.0)(sass@1.101.0))(esbuild@0.28.1)(jiti@2.7.0)(sass@1.101.0)(vue@3.5.39)
@@ -20,6 +23,15 @@ importers:
       '@fontsource/zen-kaku-gothic-antique':
         specifier: ^5.2.8
         version: 5.2.8
+      '@fontsource/zen-maru-gothic':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@types/alpinejs':
+        specifier: ^3.13.11
+        version: 3.13.11
+      alpinejs:
+        specifier: ^3.15.12
+        version: 3.15.12
       astro:
         specifier: ^7.0.6
         version: 7.0.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(jiti@2.7.0)(sass@1.101.0)
@@ -65,6 +77,12 @@ packages:
 
   '@antfu/install-pkg@1.1.0':
     resolution: {integrity: sha512-MGQsmw10ZyI+EJo45CdSER4zEb+p31LpDAFp2Z3gkSd1yqVZGi0Ebx++YTEMonJy4oChEMLsxZ64j8FH6sSqtQ==}
+
+  '@astrojs/alpinejs@1.0.0':
+    resolution: {integrity: sha512-xmLFD8MBunXCG39nS3dmINQfdhqlDNbHAYyw8n6jfLGL/AFeyYOtz6p1EtXX8NEbGLHk7mUOHoaC3j1WudUYoQ==}
+    peerDependencies:
+      '@types/alpinejs': ^3.0.0
+      alpinejs: ^3.0.0
 
   '@astrojs/compiler-binding-darwin-arm64@0.3.0':
     resolution: {integrity: sha512-3n0uu+uJpnCq8b4JFi3uGDsIisAvHctxSmH+cIO9Gbei1H1Y1QXaYboXyiWJugUmprr3OEYP7+LdodzpVFzLMQ==}
@@ -541,6 +559,9 @@ packages:
 
   '@fontsource/zen-kaku-gothic-antique@5.2.8':
     resolution: {integrity: sha512-vb1wF/JVODSLeTKMgwEBwkFozvdDkA8juIUyIVnyqCo7tStN7Q3cNpHqDmNo7uyvxbA5lptHy01oXe0P2WopNQ==}
+
+  '@fontsource/zen-maru-gothic@5.2.8':
+    resolution: {integrity: sha512-6RkH33+rgEJy1hkUdDAf+3PyQ7oUjX3vj7cekmfx/bT/9BEPd07FqrjcGBQDe4uWmUebEKuIZep3phDjsnJ6vA==}
 
   '@iconify-json/hugeicons@1.2.30':
     resolution: {integrity: sha512-L38YPId/uZ8xZJL+rdwB5/uI/jpnbzqXetfo1b0wbBi6h2pnyEy6HpQouCJXMBUOkp2iVWu8C1VdFRG+JRFwpg==}
@@ -1106,6 +1127,9 @@ packages:
   '@tybys/wasm-util@0.10.3':
     resolution: {integrity: sha512-F3fo1MYrRJYL3zER0OUOmkutjr1Vp23m7OsSgp7nq4SP6OqX6C/56XFIPAl5bt3zaBRjmW7SGz3u/6LwFpYcOg==}
 
+  '@types/alpinejs@3.13.11':
+    resolution: {integrity: sha512-3KhGkDixCPiLdL3Z/ok1GxHwLxEWqQOKJccgaQL01wc0EVM2tCTaqlC3NIedmxAXkVzt/V6VTM8qPgnOHKJ1MA==}
+
   '@types/estree-jsx@1.0.5':
     resolution: {integrity: sha512-52CcUVNFyfb1A2ALocQw/Dd1BQFNmSdkuC3BkZ6iqhdMfQz7JWOFRuJFloOzjk+6WijU56m9oKXFAXc7o3Towg==}
 
@@ -1273,6 +1297,9 @@ packages:
   '@vue/devtools-shared@8.1.5':
     resolution: {integrity: sha512-mhT4zcPFhF+Xk1O4BfhhrbXzpmfqY03fS6xGpcllbQG7lDjhQf8pQHcTIhqQIYx1hfwtHmk/6jM96ele0UxPqQ==}
 
+  '@vue/reactivity@3.1.5':
+    resolution: {integrity: sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg==}
+
   '@vue/reactivity@3.5.39':
     resolution: {integrity: sha512-TpsuBJ9gGlZa5d23XcM2y8EXanz9dZeVDQBXRwzy46ItgvM+rWpzs+UVM0wcRLxGvcav0HE5jz2gNL53xlRAog==}
 
@@ -1287,6 +1314,9 @@ packages:
     peerDependencies:
       vue: 3.5.39
 
+  '@vue/shared@3.1.5':
+    resolution: {integrity: sha512-oJ4F3TnvpXaQwZJNF3ZK+kLPHKarDmJjJ6jyzVNDKH9md1dptjC7lWR//jrGuLdek/U6iltWxqAnYOu8gCiOvA==}
+
   '@vue/shared@3.5.39':
     resolution: {integrity: sha512-l1rrBtBfTnmxvtsvdQDXltUUy8S1Y+ZaqdfUzmAnJkTd8Z8rv5v/ytW+TKiqEOWyHPoqtPlNFSs0lhRmYVSHVA==}
 
@@ -1294,6 +1324,9 @@ packages:
     resolution: {integrity: sha512-xRQbDb9BnwDafYNn6Vwl839DYVjqXYb1XVGtWAZ1kcDc6iwAL4hg3B1dZlRiuENFeO2H53gFG3in621AdERVAg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+
+  alpinejs@3.15.12:
+    resolution: {integrity: sha512-nJvPAQVNPdZZ0NrExJ/kzQco3ijR8LwvCOadQecllESiqT4NyZ/57sN9V2XyvhlBGAbmlKYgeWZvYdKq99ij/Q==}
 
   am-i-vibing@0.4.0:
     resolution: {integrity: sha512-MxT4XZL7pzLHpuvhDKdMaQHMGGkJDLluKBLsbstn+8wv9sWcFT6h+0ve9qkml95amVTZtZV83gQe2hY+ojgHLg==}
@@ -2331,6 +2364,11 @@ snapshots:
       package-manager-detector: 1.7.0
       tinyexec: 1.2.4
 
+  '@astrojs/alpinejs@1.0.0(@types/alpinejs@3.13.11)(alpinejs@3.15.12)':
+    dependencies:
+      '@types/alpinejs': 3.13.11
+      alpinejs: 3.15.12
+
   '@astrojs/compiler-binding-darwin-arm64@0.3.0':
     optional: true
 
@@ -2801,6 +2839,8 @@ snapshots:
 
   '@fontsource/zen-kaku-gothic-antique@5.2.8': {}
 
+  '@fontsource/zen-maru-gothic@5.2.8': {}
+
   '@iconify-json/hugeicons@1.2.30':
     dependencies:
       '@iconify/types': 2.0.0
@@ -3199,6 +3239,8 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
+  '@types/alpinejs@3.13.11': {}
+
   '@types/estree-jsx@1.0.5':
     dependencies:
       '@types/estree': 1.0.9
@@ -3481,6 +3523,10 @@ snapshots:
 
   '@vue/devtools-shared@8.1.5': {}
 
+  '@vue/reactivity@3.1.5':
+    dependencies:
+      '@vue/shared': 3.1.5
+
   '@vue/reactivity@3.5.39':
     dependencies:
       '@vue/shared': 3.5.39
@@ -3503,9 +3549,15 @@ snapshots:
       '@vue/shared': 3.5.39
       vue: 3.5.39
 
+  '@vue/shared@3.1.5': {}
+
   '@vue/shared@3.5.39': {}
 
   acorn@8.17.0: {}
+
+  alpinejs@3.15.12:
+    dependencies:
+      '@vue/reactivity': 3.1.5
 
   am-i-vibing@0.4.0:
     dependencies:
