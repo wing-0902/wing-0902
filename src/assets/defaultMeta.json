@@ -1,5 +1,6 @@
 {
   "title": "Wingのサイト",
   "description": "ちょっとのんびり屋で，ちょっとマイペースなWingのホームページ．趣味：ウェブ開発，写真．",
-  "site_name": "Wingのサイト"
+  "site_name": "Wingのサイト",
+  "og_image": "/ogp/default.jpeg"
 }

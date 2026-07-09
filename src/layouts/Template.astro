@@ -25,6 +25,7 @@ interface Props {
   ogTitle?: string;
   ogDescription?: string;
   ogSiteName?: string;
+  ogImageUrl?: string;
   ogType?: string;
   twitterCard?: string;
 }
@@ -38,6 +39,7 @@ const {
   ogTitle = title,
   ogDescription = description,
   ogSiteName = defaultMeta.site_name,
+  ogImageUrl = defaultMeta.og_image,
   ogType = 'website',
   twitterCard = 'summary_large_image'
 } = Astro.props;
@@ -58,6 +60,8 @@ const {
 
     {description && <meta name="description" content={description} />}
     {ogDescription && <meta property="og:description" content={ogDescription} />}
+
+    {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
 
     {ogType && <meta property="og:type" content={ogType} />}
     {twitterCard && <meta name="twitter:card" content={twitterCard} />}
