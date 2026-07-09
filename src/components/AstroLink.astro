@@ -1,4 +1,24 @@
 ---
+import { joinURL, withTrailingSlash } from 'ufo';
+import { getLang } from '~/utils/handleLangs';
 
+interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const currentLang = getLang(canonicalURL.toString());
+
+let hrefLink = withTrailingSlash(href);
+
+if (currentLang === 'en') {
+  hrefLink = withTrailingSlash(joinURL(hrefLink, 'en'));
+}
 ---
 
+<a href={hrefLink}>
+  <slot />
+</a>

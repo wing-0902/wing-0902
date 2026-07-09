@@ -1,4 +1,5 @@
 ---
+import AstroLink from '~/components/AstroLink.astro';
 import Logo from '~/components/Logo.astro';
 import Footer from '~/layouts/Footer.astro';
 import { getJaUrl } from '~/utils/handleLangs';
@@ -22,7 +23,9 @@ if (currentLang === 'ja') {
 ---
 
 <header p-3 w-full h-12 flex justify-between align-center>
-  <Logo height={40} />
+  <AstroLink href="/">
+    <Logo height={40} />
+  </AstroLink>
   <div flex gap="2">
     <a mx-4 flex align-center href={otherLangUrl}>
       <i i-hugeicons-language-skill></i>
