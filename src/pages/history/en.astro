@@ -1,10 +1,32 @@
 ---
 import Template from '~/layouts/Template.astro';
 import Header from '~/layouts/Header.astro';
+
+import HistoryWindow from '~/components/HistoryWindow.vue';
 ---
 
-<Template title="History - Wing's Website">
+<Template title="History - Wing's website">
   <Header>
     <h1>History</h1>
+
+    <HistoryWindow title="Birth" when="02 Sep. 2008" client:load>
+      <p>at Asahi Ward, Osaka City</p>
+    </HistoryWindow>
+
+    <HistoryWindow title="Start taking piano lessons" when="when three years old" client:load>
+      <p>continued until the fifth-year in elementary school</p>
+    </HistoryWindow>
+
+    <HistoryWindow title="Enter Osaka Seiko Gakuin middle school" when="Apr. 2021" client:load>
+      <p>a six-year secondary school in Japan, now I'm in the same high school.</p>
+    </HistoryWindow>
+
+    <HistoryWindow title="Start web development" when="when first-year in high school" client:load>
+      <p>I've been interested for a long time, but technically begain around here.</p>
+    </HistoryWindow>
+
+    <HistoryWindow title="Start my website" when="14 Mar. 2025" client:load>
+      <p>the first day of @wing.osaka</p>
+    </HistoryWindow>
   </Header>
 </Template>

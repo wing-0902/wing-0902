@@ -2,58 +2,69 @@
 defineProps<{
   title: string;
   when: string;
-  description?: string;
 }>();
 
-import { ref } from 'vue';
+import { computed, ref, useSlots} from 'vue';
 
 const isOpen = ref(false);
+
+const slots = useSlots();
+const hasSlotContent = computed(() => !!slots.default?.());
+
+const toggleOpen = () => {
+  if (hasSlotContent.value) {
+    isOpen.value = !isOpen.value;
+  }
+};
 </script>
 
 <template>
   <section w-full>
     <div flex w-full justify-between>
-      <div flex flex-1 items-center gap-1>
-        <h3 m-2>{{ title }}</h3>
-        <small>{{ when }}</small>
+      <div @click="toggleOpen" flex flex-1 items-center gap-1>
+        <h2 m-2>{{ title }}</h2>
+        <small text-sm>{{ when }}</small>
       </div>
       <button
-        @click="isOpen = !isOpen"
+        v-if="hasSlotContent"
+        @click="toggleOpen"
         bg-transparent
         border-none
         text-white
         flex
         items-center
-        style="transition: transform 0.3s ease-in-out;"
+        transition="transform 300 ease-in-out"
         :class="{ rotate180: isOpen }"
       >
         <i text-xl i-hugeicons-arrow-down-01></i>
       </button>
     </div>
-    
-    <Transition name="expand">
-      <div v-if="isOpen" class="menu-content">
-        <p>{{ description }}</p>
+
+    <div px-4 class="menu-wrapper" :class="{ 'is-open': isOpen }">
+      <div class="menu-content">
+        <slot />
       </div>
-    </Transition>
+    </div>
   </section>
 </template>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .rotate180 {
   transform: rotate(180deg);
 }
 
-/* アニメーション用のCSS */
-.expand-enter-active,
-.expand-leave-active {
-  transition: all 0.3s ease-in-out;
+.menu-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-in-out;
   overflow: hidden;
+
+  &.is-open {
+    grid-template-rows: 1fr;
+  }
 }
 
-.expand-enter-from,
-.expand-leave-to {
-  max-height: 0;
-  opacity: 0;
+.menu-content {
+  min-height: 0;
 }
 </style>

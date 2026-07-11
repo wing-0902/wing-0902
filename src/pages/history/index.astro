@@ -9,6 +9,24 @@ import HistoryWindow from '~/components/HistoryWindow.vue';
   <Header>
     <h1>経歴</h1>
 
-    <HistoryWindow title="出生" when="2008年9月2日" description="Happy Birthday" client:load />
+    <HistoryWindow title="出生" when="平成20年9月2日" client:load>
+      <p>於 大阪市旭区</p>
+    </HistoryWindow>
+
+    <HistoryWindow title="ピアノを習い始める" when="3歳ぐらいのころ" client:load>
+      <p>小５まで続けました</p>
+    </HistoryWindow>
+
+    <HistoryWindow title="大阪星光学院中学校 入学" when="令和3年4月" client:load>
+      <p>中高一貫校，現在同高等学校在学中</p>
+    </HistoryWindow>
+
+    <HistoryWindow title="ウェブ開発を始める" when="高１のとき" client:load>
+      <p>元々興味があったのですが，ちゃんと始めたのはこの頃です．</p>
+    </HistoryWindow>
+
+    <HistoryWindow title="ホームページ開設" when="令和7年3月14日" client:load>
+      <p>@wing.osaka が始まった日</p>
+    </HistoryWindow>
   </Header>
 </Template>
