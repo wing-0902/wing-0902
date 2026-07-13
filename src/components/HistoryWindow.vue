@@ -4,7 +4,7 @@ defineProps<{
   when: string;
 }>();
 
-import { computed, ref, useSlots} from 'vue';
+import { computed, ref, useSlots } from 'vue';
 
 const isOpen = ref(false);
 

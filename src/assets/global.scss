@@ -17,3 +17,9 @@ a {
 i {
   display: inline-block;
 }
+
+pre,
+code {
+  font-family: 'Fira Code Variable', monospace !important;
+  font-variant-ligatures: contextual;
+}

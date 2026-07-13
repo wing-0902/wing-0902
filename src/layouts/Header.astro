@@ -22,7 +22,19 @@ if (currentLang === 'ja') {
 }
 ---
 
-<header class='blur-gradient-box' fixed top-0 left-0 p-3 m-0 w-full h-13 flex justify-between align-center>
+<header
+  class="blur-gradient-box"
+  fixed
+  top-0
+  left-0
+  p-3
+  m-0
+  w-full
+  h-13
+  flex
+  justify-between
+  align-center
+>
   <AstroLink href="/">
     <Logo height={40} />
   </AstroLink>
@@ -47,13 +59,13 @@ if (currentLang === 'ja') {
   </div>
 </div>
 
-<style lang='scss'>
-header {
-  /* 背景をぼかす */
-  backdrop-filter: blur(12px);
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+<style lang="scss">
+  header {
+    /* 背景をぼかす */
+    backdrop-filter: blur(12px);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
 
-  background-color: transparent;
-  z-index: 50; 
-}
+    background-color: transparent;
+    z-index: 50;
+  }
 </style>
