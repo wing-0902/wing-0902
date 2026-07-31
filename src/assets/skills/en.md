@@ -1,33 +1,33 @@
-- 言語
+- Languages
   - TypeScript
   - JavaScript
   - Swift
   - Python
-- UIフレームワーク
+- UI Frameworks
   - Vue.js
   - Svelte
   - React
   - Alpine.js
-- メタフレームワーク
+- Meta Frameworks
   - Nuxt
   - SvelteKit
   - Astro
-- スタイルシート
+- Stylesheet
   - Sass/SCSS
   - [UnoCSS](https://unocss.dev)
-- インフラ
+- Infrastructure
   - Cloudflare
     - Workers & Pages
     - CDN & DNS
   - Firebase
   - [AT Protocol](https://atproto.com)
-- 開発ツール
+- Dev Tools
   - Visual Studio Code
   - GitHub
   - Prettier
   - Oxfmt
   - [npmx](https://npmx.dev)
-- お気に入りのライブラリ
+- Favorite Libraries
   - ufo
   - [Nitro](https://nitro.build)
   - [Pagefind](https://pagefind.app)
