@@ -51,6 +51,9 @@ importers:
       '@iconify-json/hugeicons':
         specifier: ^1.2.30
         version: 1.2.30
+      '@iconify-json/material-symbols-light':
+        specifier: ^1.2.87
+        version: 1.2.87
       '@unocss/astro':
         specifier: ^66.7.5
         version: 66.7.5(vite@8.1.3(esbuild@0.28.1)(jiti@2.7.0)(sass@1.101.0))
@@ -577,6 +580,9 @@ packages:
 
   '@iconify-json/hugeicons@1.2.30':
     resolution: {integrity: sha512-L38YPId/uZ8xZJL+rdwB5/uI/jpnbzqXetfo1b0wbBi6h2pnyEy6HpQouCJXMBUOkp2iVWu8C1VdFRG+JRFwpg==}
+
+  '@iconify-json/material-symbols-light@1.2.87':
+    resolution: {integrity: sha512-8CjS4pWeVRbcIww8DsW+OonIMXRJm7loTrLvmmrS708BSCrHuqn+6MXcORps3nQdZESQHsNH0HItVQS0+i77Pw==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -3107,6 +3113,10 @@ snapshots:
   '@fontsource/zen-maru-gothic@5.2.8': {}
 
   '@iconify-json/hugeicons@1.2.30':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/material-symbols-light@1.2.87':
     dependencies:
       '@iconify/types': 2.0.0
 

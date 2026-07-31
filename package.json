@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@iconify-json/hugeicons": "^1.2.30",
+    "@iconify-json/material-symbols-light": "^1.2.87",
     "@unocss/astro": "^66.7.5",
     "@unocss/preset-attributify": "^66.7.5",
     "@unocss/preset-icons": "^66.7.5",

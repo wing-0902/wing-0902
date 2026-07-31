@@ -1,0 +1,19 @@
+---
+import Template from '~/layouts/Template.astro';
+import Header from '~/layouts/Header.astro';
+
+import ProjectsCard from '~/components/ProjectsCard.astro';
+
+import { getCollection } from 'astro:content';
+
+const allProjs = (await getCollection('projectsJa')).sort(
+  (a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf()
+);
+---
+
+<Template title="作品 #webdev - Wingのサイト">
+  <Header>
+    <h1>作品</h1>
+    {allProjs.map((proj) => <ProjectsCard proj={proj} />)}
+  </Header>
+</Template>

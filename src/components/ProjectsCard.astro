@@ -1,0 +1,83 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  proj: CollectionEntry<'projectsJa'>;
+}
+
+const { proj } = Astro.props;
+---
+
+<div flex="~ col" w-75 h-120 class="card-root">
+  <a href={proj.id}>
+    <div h-60>
+      {
+        proj.data.image ? (
+          <img src={proj.data.image} alt={proj.data.title} />
+        ) : (
+          <>
+            <span />
+          </>
+        )
+      }
+    </div>
+    <div class="content" py-1 px-2>
+      <h3 m-0 class="title">{proj.data.title}</h3>
+      <p m-0>{proj.data.description}</p>
+
+      <ul flex gap-3 m-0 p-0 class="stack">
+        {proj.data.techStack.map((tech) => <li> {tech}</li>)}
+      </ul>
+    </div>
+  </a>
+  <div class="links" flex gap-3 justify-center>
+    {
+      proj.data.appUrl && (
+        <a href={proj.data.appUrl} target="_blank">
+          <i i-material-symbols-light-open-in-new />
+          App
+        </a>
+      )
+    }
+    {
+      proj.data.codeUrl && (
+        <a href={proj.data.codeUrl} target="_blank">
+          <i i-hugeicons-github />
+          GitHub
+        </a>
+      )
+    }
+  </div>
+</div>
+
+<style lang="scss">
+  @use '../assets/v';
+
+  .card-root {
+    a {
+      color: v.$foreground;
+      text-decoration: none;
+      .title {
+        font-family: 'Fira Code Variable', monospace;
+      }
+
+      &:hover {
+        .title {
+          color: v.$link_color;
+          text-decoration: underline;
+        }
+      }
+
+      .content {
+        .stack {
+          list-style-type: none;
+        }
+      }
+    }
+    .links {
+      a {
+        color: v.$link_color;
+      }
+    }
+  }
+</style>
