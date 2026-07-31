@@ -1,9 +1,9 @@
 ---
-import { Code } from 'astro/components';
+import CodeWindow from './CodeWindow.astro';
 import codeSnippet from '~/assets/profile.ts?raw';
 ---
 
-<Code
+<CodeWindow
   x-data
   x-init="$nextTick(() => { 
     $el.scrollTo({
@@ -11,10 +11,8 @@ import codeSnippet from '~/assets/profile.ts?raw';
       behavior: 'smooth'
     })
   })"
-  overflow="auto"
-  p-3
-  h-75
+  title="src/assets/profile.ts"
+  h-73
   code={codeSnippet}
   lang="ts"
-  theme="vitesse-dark"
 />

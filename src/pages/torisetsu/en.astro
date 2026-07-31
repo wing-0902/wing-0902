@@ -1,11 +1,16 @@
 ---
 import Template from '~/layouts/Template.astro';
 import Header from '~/layouts/Header.astro';
+
+import CodeWindow from '~/components/CodeWindow.astro';
+
+import torisetsu from '~/assets/torisetsu/en.md?raw';
 ---
 
-<Template title="README" description="Quick Guide to Me.">
+<Template title="README - Wing's website" description="Quick Guide to Me.">
   <Header>
     <h1 class="title">wing.osaka/README</h1>
+    <CodeWindow code={torisetsu} title="README.md" lang="md" wrap />
   </Header>
 </Template>
 

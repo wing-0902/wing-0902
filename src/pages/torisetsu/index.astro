@@ -2,7 +2,7 @@
 import Template from '~/layouts/Template.astro';
 import Header from '~/layouts/Header.astro';
 
-import { Code } from 'astro/components';
+import CodeWindow from '~/components/CodeWindow.astro';
 
 import torisetsu from '~/assets/torisetsu/ja.md?raw';
 ---
@@ -11,7 +11,7 @@ import torisetsu from '~/assets/torisetsu/ja.md?raw';
   <Header>
     <h1 class="title">wing.osaka/README</h1>
 
-    <Code code={torisetsu} lang="markdown" theme="night-owl" wrap />
+    <CodeWindow code={torisetsu} lang="markdown" title="README.md" wrap />
   </Header>
 </Template>
 
