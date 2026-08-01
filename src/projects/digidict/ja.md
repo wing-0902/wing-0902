@@ -1,6 +1,9 @@
 ---
 title: DigiDict
 description: Nuxt Layerで作るデジタル辞書．
+category:
+  - ライブラリ
+  - ウェブアプリ
 startDate: 2026-06-12T03:50:04
 featured: true
 techStack:

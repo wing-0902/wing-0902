@@ -6,6 +6,7 @@ const projSchema = ({ image }: { image: any }) =>
   z.object({
     title: z.string(),
     description: z.string(),
+    category: z.array(z.string()).default([]),
     startDate: z.date(),
     featured: z.boolean().default(false),
     techStack: z.array(z.string()).default([]),

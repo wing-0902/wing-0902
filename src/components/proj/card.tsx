@@ -1,5 +1,7 @@
 import s from './card.module.scss';
 
+import { For } from 'solid-js';
+
 import type { CollectionEntry } from 'astro:content';
 
 interface ProjCardProps {
@@ -18,7 +20,10 @@ function ProjCard(props: ProjCardProps) {
         <a class={s.mainLink}>
           <div class={s.imgSlot}></div>
           <div class={s.content}>
-            <h3 class={s.title}>{data.title}</h3>
+            <h3 class={s.title}>
+              {data.title}
+              <small class={s.category}>{data.category.join(', ')}</small>
+            </h3>
             <p m-0>{data.description}</p>
 
             <ul class={s.stack}>
