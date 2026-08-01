@@ -1,0 +1,29 @@
+@use '../../assets/v';
+
+.searchRoot {
+  display: flex;
+  width: 100%;
+}
+
+.textInput {
+  width: 100%;
+}
+
+.dropdownContainer {
+  position: relative;
+  .dropdownButton {
+    
+  }
+  .showDropdownRoot {
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    margin-top: 8px;
+    width: 300px;
+    border: 1px solid v.$foreground;
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+  }
+}

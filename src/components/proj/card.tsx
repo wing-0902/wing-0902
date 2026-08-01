@@ -16,7 +16,7 @@ function ProjCard(props: ProjCardProps) {
     <>
       <div class={s.cardRoot}>
         <a class={s.mainLink}>
-          <div bg-red h-60></div>
+          <div class={s.imgSlot}></div>
           <div class={s.content}>
             <h3 class={s.title}>{data.title}</h3>
             <p m-0>{data.description}</p>

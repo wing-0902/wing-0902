@@ -4,12 +4,19 @@
   width: 100%;
   max-width: 100%;
   min-width: 0;
-  height: 440px;
+  min-height: 310px;
   display: flex;
   flex-direction: column;
+
+  border: 1px solid v.$link_color;
+  border-radius: 10px;
   .mainLink {
     color: v.$foreground;
     text-decoration: none;
+    .imgSlot {
+      height: 240px;
+      border-radius: 9px 9px 0 0;
+    }
     .title {
       font-family: 'Fira Code Variable', monospace;
       margin: 0;
@@ -26,7 +33,7 @@
       padding: 5px;
       .stack {
         display: flex;
-        gap: 3px;
+        gap: 10px;
         margin: 0;
         padding: 0;
         list-style-type: none;
