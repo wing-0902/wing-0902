@@ -6,9 +6,11 @@ import vue from '@astrojs/vue';
 import alpinejs from '@astrojs/alpinejs';
 import rehypeExternalLinks from 'rehype-external-links';
 
+import svelte from '@astrojs/svelte';
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [UnoCSS(), vue(), alpinejs()],
+  integrations: [UnoCSS(), vue(), alpinejs(), svelte()],
   markdown: {
     rehypePlugins: [
       [
