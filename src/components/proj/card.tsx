@@ -14,23 +14,21 @@ function ProjCard(props: ProjCardProps) {
 
   return (
     <>
-      <div class={s.cardRoot} w-full h-110>
+      <div class={s.cardRoot}>
         <a class={s.mainLink}>
-          <div h-60></div>
-          <div class={s.content} px-2 py-1>
-            <h3 class={s.title} m-0>
-              {data.title}
-            </h3>
+          <div bg-red h-60></div>
+          <div class={s.content}>
+            <h3 class={s.title}>{data.title}</h3>
             <p m-0>{data.description}</p>
 
-            <ul class={s.stack} gap-3 m-0 p-0>
+            <ul class={s.stack}>
               {data.techStack.map((tech) => (
                 <li>{tech}</li>
               ))}
             </ul>
           </div>
         </a>
-        <div class={s.links} gap-3 justify-center>
+        <div class={s.links}>
           {data.appUrl && (
             <a href={data.appUrl} target="_blank">
               <i i-material-symbols-light-open-in-new />

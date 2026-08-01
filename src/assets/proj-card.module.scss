@@ -1,6 +1,10 @@
 @use 'v';
 
 .cardRoot {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: 440px;
   display: flex;
   flex-direction: column;
   .mainLink {
@@ -8,6 +12,7 @@
     text-decoration: none;
     .title {
       font-family: 'Fira Code Variable', monospace;
+      margin: 0;
     }
 
     &:hover {
@@ -18,14 +23,21 @@
     }
 
     .content {
+      padding: 5px;
       .stack {
         display: flex;
+        gap: 3px;
+        margin: 0;
+        padding: 0;
         list-style-type: none;
       }
     }
   }
   .links {
     display: flex;
+    width: 100%;
+    gap: 12px;
+    justify-content: center;
     a {
       color: v.$link_color;
     }
