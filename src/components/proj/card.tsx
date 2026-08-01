@@ -1,4 +1,4 @@
-import s from '~/assets/proj-card.module.scss';
+import s from './card.module.scss';
 
 import type { CollectionEntry } from 'astro:content';
 
