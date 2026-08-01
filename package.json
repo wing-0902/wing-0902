@@ -16,7 +16,6 @@
     "@astrojs/alpinejs": "^1.0.0",
     "@astrojs/markdown-remark": "^7.2.2",
     "@astrojs/svelte": "^9.0.1",
-    "@astrojs/vue": "^7.0.1",
     "@fontsource-variable/fira-code": "^5.2.7",
     "@fontsource-variable/m-plus-1-code": "^5.2.10",
     "@fontsource/zen-kaku-gothic-antique": "^5.2.8",
@@ -27,8 +26,7 @@
     "rehype-external-links": "^3.0.0",
     "svelte": "^5.56.8",
     "typescript": "^6.0.3",
-    "ufo": "^1.6.4",
-    "vue": "^3.5.39"
+    "ufo": "^1.6.4"
   },
   "devDependencies": {
     "@iconify-json/hugeicons": "^1.2.30",
