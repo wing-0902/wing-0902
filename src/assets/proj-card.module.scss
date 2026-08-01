@@ -1,0 +1,33 @@
+@use 'v';
+
+.cardRoot {
+  display: flex;
+  flex-direction: column;
+  .mainLink {
+    color: v.$foreground;
+    text-decoration: none;
+    .title {
+      font-family: 'Fira Code Variable', monospace;
+    }
+
+    &:hover {
+      .title {
+        color: v.$link_color;
+        text-decoration: underline;
+      }
+    }
+
+    .content {
+      .stack {
+        display: flex;
+        list-style-type: none;
+      }
+    }
+  }
+  .links {
+    display: flex;
+    a {
+      color: v.$link_color;
+    }
+  }
+}

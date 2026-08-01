@@ -1,6 +1,6 @@
 ---
 title: DigiDict
-description: Nuxt Layer to create a dictionary website.
+description: Nuxt Layerで作るデジタル辞書．
 startDate: 2026-06-12T03:50:04
 featured: true
 techStack:
