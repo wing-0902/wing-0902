@@ -7,6 +7,11 @@
   min-height: 310px;
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 
   border: 1px solid v.$link_color;
   border-radius: 10px;
@@ -29,7 +34,6 @@
     &:hover {
       .title {
         color: v.$link_color;
-        text-decoration: underline;
       }
     }
 

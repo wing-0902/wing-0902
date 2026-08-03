@@ -1,9 +1,10 @@
 import { createSignal, For, Show, onMount, onCleanup } from 'solid-js';
+import { Transition } from 'solid-transition-group';
+
 import type { CollectionEntry } from 'astro:content';
 import ProjCard from './card.tsx';
 
 import s from './list.module.scss';
-// 使っていない不要なインポートは削除するかそのままでもOKです
 
 interface ProjectItem {
   slug: string;
@@ -32,7 +33,6 @@ export default function ProjList(props: ProjListProps) {
     return Array.from(techSet).sort();
   };
 
-  // 【修正1】returnの位置をループの外側に修正
   const allCategoriesList = () => {
     const categorySet = new Set<string>();
     props.projects.forEach((proj) => {
@@ -63,11 +63,11 @@ export default function ProjList(props: ProjListProps) {
     const query = searchQuery().toLowerCase().trim();
     const keywords = query ? query.split(/[\s\u3000]+/).filter(Boolean) : [];
     const techFilters = selectedTechs();
-    const categoryFilters = selectedCategories(); // 【修正2】カテゴリーのフィルターを取得
+    const categoryFilters = selectedCategories();
 
     return props.projects.filter((proj) => {
       const projTechs = proj.data.techStack || [];
-      const projCategories = proj.data.category || []; // プロジェクトのカテゴリーを取得
+      const projCategories = proj.data.category || [];
 
       // 技術スタックのフィルター
       if (techFilters.length > 0) {
@@ -75,7 +75,6 @@ export default function ProjList(props: ProjListProps) {
         if (!matchesAllTechs) return false;
       }
 
-      // 【修正2】カテゴリー（タグ）のフィルターを追加
       if (categoryFilters.length > 0) {
         const matchesAllCategories = categoryFilters.every((cat) => projCategories.includes(cat));
         if (!matchesAllCategories) return false;
@@ -101,7 +100,6 @@ export default function ProjList(props: ProjListProps) {
       if (stackDropdownRef && !stackDropdownRef.contains(e.target as Node)) {
         setIsStackOpen(false);
       }
-      // 【おまけ】カテゴリー側のドロップダウンの外側クリックでも閉じるようにすると便利です
       if (categoryDropdownRef && !categoryDropdownRef.contains(e.target as Node)) {
         setIsCategoryOpen(false);
       }
@@ -129,65 +127,78 @@ export default function ProjList(props: ProjListProps) {
         {/* ドロップダウンメニュー 技術スタック */}
         <div class={s.dropdownContainer} ref={stackDropdownRef}>
           <button onClick={() => setIsStackOpen(!isStackOpen())} class={s.dropdownButton}>
-            <span><i i-material-symbols-light-deployed-code /></span>
+            <span>
+              <i i-material-symbols-light-deployed-code />
+            </span>
           </button>
+          <Transition name="pop">
+            <Show when={isStackOpen()}>
+              <div class={s.showDropdownRoot}>
+                <div flex justify-between>
+                  <span></span>
+                  <span>選択肢</span>
+                  <button onClick={() => setSelectedTechs([])} class={s.clearButton}>
+                    <i i-material-symbols-light-clear-all></i>
+                  </button>
+                </div>
 
-          <Show when={isStackOpen()}>
-            <div class={s.showDropdownRoot}>
-              <div>
-                <span>選択肢</span>
-                <button onClick={() => setSelectedTechs([])}>クリア</button>
+                <For each={allTechList()}>
+                  {(tech) => {
+                    const isChecked = () => selectedTechs().includes(tech);
+                    return (
+                      <label>
+                        <input
+                          type="checkbox"
+                          checked={isChecked()}
+                          onChange={() => toggleTech(tech)}
+                        />
+                        <span>{tech}</span>
+                      </label>
+                    );
+                  }}
+                </For>
               </div>
-
-              <For each={allTechList()}>
-                {(tech) => {
-                  const isChecked = () => selectedTechs().includes(tech);
-                  return (
-                    <label>
-                      <input
-                        type="checkbox"
-                        checked={isChecked()}
-                        onChange={() => toggleTech(tech)}
-                      />
-                      <span>{tech}</span>
-                    </label>
-                  );
-                }}
-              </For>
-            </div>
-          </Show>
+            </Show>
+          </Transition>
         </div>
 
         {/* ドロップダウンメニュー カテゴリー */}
         <div class={s.dropdownContainer} ref={categoryDropdownRef}>
-          {/* JSX内でのクリックハンドラーは大文字 camelCase の onClick に統一するのがおすすめです */}
           <button onClick={() => setIsCategoryOpen(!isCategoryOpen())} class={s.dropdownButton}>
-            <span><i i-material-symbols-light-tag /></span>
+            <span>
+              <i i-material-symbols-light-tag />
+            </span>
           </button>
 
-          <Show when={isCategoryOpen()}>
-            <div class={s.showDropdownRoot}>
-              <div>
-                <span>選択肢</span>
-                <button onClick={() => setSelectedCategories([])}>クリア</button>
+          <Transition name="pop">
+            <Show when={isCategoryOpen()}>
+              <div class={s.showDropdownRoot}>
+                <div flex justify-between>
+                  <span></span>
+                  <span>選択肢</span>
+                  <button onClick={() => setSelectedCategories([])} class={s.clearButton}>
+                    {' '}
+                    <i i-material-symbols-light-clear-all></i>
+                  </button>
+                </div>
+                <For each={allCategoriesList()}>
+                  {(category) => {
+                    const isChecked = () => selectedCategories().includes(category);
+                    return (
+                      <label>
+                        <input
+                          type="checkbox"
+                          checked={isChecked()}
+                          onChange={() => toggleCategory(category)}
+                        />
+                        <span>{category}</span>
+                      </label>
+                    );
+                  }}
+                </For>
               </div>
-              <For each={allCategoriesList()}>
-                {(category) => {
-                  const isChecked = () => selectedCategories().includes(category);
-                  return (
-                    <label>
-                      <input
-                        type="checkbox"
-                        checked={isChecked()}
-                        onChange={() => toggleCategory(category)}
-                      />
-                      <span>{category}</span>
-                    </label>
-                  );
-                }}
-              </For>
-            </div>
-          </Show>
+            </Show>
+          </Transition>
         </div>
       </div>
 
