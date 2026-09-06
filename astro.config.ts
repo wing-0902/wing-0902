@@ -11,6 +11,10 @@ import rehypeExternalLinks from 'rehype-external-links';
 
 // https://astro.build/config
 export default defineConfig({
+  i18n: {
+    locales: ["ja-JP", "en-GB"],
+    defaultLocale: "ja-JP"
+  },
   integrations: [UnoCSS(), alpinejs(), svelte(), solidJs({ devtools: true })],
   markdown: {
     processor: unified({

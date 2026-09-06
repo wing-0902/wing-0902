@@ -1,25 +1,12 @@
 ---
-import AstroLink from '~/components/AstroLink.astro';
+import {useTranslations} from "~/i18n/helper";
+
 import Logo from '~/components/Logo.astro';
 import Footer from '~/layouts/Footer.astro';
-import { getJaUrl } from '~/utils/handleLangs';
-
-import { getEnUrl, getLang } from '~/utils/handleLangs';
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const currentLang = getLang(canonicalURL.toString());
-
-let otherLang = '';
-let otherLangUrl = '';
-
-if (currentLang === 'ja') {
-  otherLang = 'en';
-  otherLangUrl = getEnUrl(canonicalURL.toString());
-} else if (currentLang === 'en') {
-  otherLang = 'ja';
-  otherLangUrl = getJaUrl(canonicalURL.toString());
-}
+const t = useTranslations(Astro);
 ---
 
 <header
@@ -35,13 +22,13 @@ if (currentLang === 'ja') {
   justify-between
   align-center
 >
-  <AstroLink href="/">
+  <a href="/">
     <Logo height={40} />
-  </AstroLink>
+  </a>
   <div flex gap="2">
-    <a mx-4 flex align-center href={otherLangUrl}>
+    <a mx-4 flex align-center href={/* otherLangUrl */}>
       <i i-hugeicons-language-skill></i>
-      <span text-xl>{otherLang}</span>
+      <span text-xl>{t("header.changeLang")}</span>
     </a>
     <a href="https://bsky.app/profile/wing.osaka" target="_blank">
       <i i-hugeicons-bluesky text-xl></i>

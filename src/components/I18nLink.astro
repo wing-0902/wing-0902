@@ -1,0 +1,19 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const currentLang = Astro.currentLocale ?? "ja-JP";
+
+interface Props {
+  lang?: string;
+  href: string;    
+};
+
+const {
+  lang = currentLang,
+  href
+} = Astro.props;
+---
+
+<a href={getRelativeLocaleUrl(lang, href)}>
+    <slot />
+</a>

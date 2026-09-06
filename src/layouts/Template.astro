@@ -10,16 +10,16 @@ import '@fontsource/zen-maru-gothic/400.css';
 import '@fontsource/zen-kaku-gothic-antique/900.css';
 
 import defaultMeta from '~/assets/defaultMeta.json';
-import { getLang } from '~/utils/handleLangs';
+// import { getLang } from '~/utils/handleLangs';
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const defaultLang = getLang(canonicalURL.toString());
+// const defaultLang = getLang(canonicalURL.toString());
 
 interface Props {
   title?: string;
   description?: string;
-  lang?: string;
+  // lang?: string;
 
   /* ogp data (not always required) */
   ogTitle?: string;
@@ -33,7 +33,7 @@ interface Props {
 const {
   title = defaultMeta.title,
   description = defaultMeta.description,
-  lang = defaultLang,
+  // lang = defaultLang,
 
   /* ogp data can be generated automatically if props doesn't exist */
   ogTitle = title,
@@ -45,7 +45,7 @@ const {
 } = Astro.props;
 ---
 
-<html lang={lang}>
+<html lang={Astro.currentLocale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
