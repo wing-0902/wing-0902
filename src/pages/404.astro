@@ -1,0 +1,23 @@
+---
+import Template from '~/layouts/Template.astro';
+import Header from '~/layouts/Header.astro';
+import I18nLink from '~/components/I18nLink.astro';
+---
+
+<Template>
+  <Header>
+    <div>
+      <h1>ページが見つかりません</h1>
+      <pre>Error 404: Not Found</pre>
+
+      <p>申し訳ありませんが，ページが移動・削除されたか，URLが誤っている可能性があります．</p>
+      <p>以下のリンクもご活用ください．</p>
+
+      <nav>
+        <ul>
+          <I18nLink href="/">トップページに戻る</I18nLink>
+        </ul>
+      </nav>
+    </div>
+  </Header>
+</Template>

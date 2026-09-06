@@ -1,12 +1,16 @@
 ---
-import {useTranslations} from "~/i18n/helper";
+import { useTranslations } from '~/i18n/helper';
+import { I18nSwitch } from '~/components/I18nChange.tsx';
 
 import Logo from '~/components/Logo.astro';
 import Footer from '~/layouts/Footer.astro';
-
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+import I18nLink from '~/components/I18nLink.astro';
 
 const t = useTranslations(Astro);
+
+const currentLang = Astro.currentLocale ?? 'ja-jp';
+const currentPath = Astro.url.pathname;
+const locales = ['ja-jp', 'en-gb'];
 ---
 
 <header
@@ -22,14 +26,11 @@ const t = useTranslations(Astro);
   justify-between
   align-center
 >
-  <a href="/">
+  <I18nLink href="/">
     <Logo height={40} />
-  </a>
+  </I18nLink>
   <div flex gap="2">
-    <a mx-4 flex align-center href={/* otherLangUrl */}>
-      <i i-hugeicons-language-skill></i>
-      <span text-xl>{t("header.changeLang")}</span>
-    </a>
+    <I18nSwitch client:load currentLang={currentLang} locales={locales} currentPath={currentPath} />
     <a href="https://bsky.app/profile/wing.osaka" target="_blank">
       <i i-hugeicons-bluesky text-xl></i>
     </a>

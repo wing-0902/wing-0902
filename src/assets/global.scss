@@ -5,6 +5,10 @@ body {
   color: v.$foreground;
   font-family: 'Zen Maru Gothic', sans-serif;
 
+  --background: v.$background;
+  --foreground: v.$foreground;
+  --link-color: v.$link_color;
+
   h1 {
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
   }

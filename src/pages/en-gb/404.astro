@@ -1,0 +1,24 @@
+---
+import Template from '~/layouts/Template.astro';
+import Header from '~/layouts/Header.astro';
+import I18nLink from '~/components/I18nLink.astro';
+---
+
+<Template>
+  <Header>
+    <div>
+      <h1>Page Not Found</h1>
+      <pre>Error 404: Not Found</pre>
+
+      <p>Sorry, the page you were looking for doesn't exist.</p>
+      <p>Try changing the language from the menu above to see if this page is available in another version.</p>
+      <p>Or the page might have been moved, deleted, or never existed</p>
+
+      <nav>
+        <ul>
+          <I18nLink href="/">Take me home.</I18nLink>
+        </ul>
+      </nav>
+    </div>
+  </Header>
+</Template>

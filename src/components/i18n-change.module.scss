@@ -1,0 +1,15 @@
+@use '../assets/v';
+
+.menu {
+  color: v.$link_color;
+  border: 1px solid v.$link_color;
+  border-radius: 4px;
+
+  select {
+    border: none;
+    outline: none;
+    appearance: none;
+    color: v.$link_color;
+    font-size: 14px;
+  }
+}
